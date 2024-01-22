@@ -9,7 +9,7 @@
 
 - 👨‍💻 All of my projects are available at [https://github.com/vinycxuz](https://github.com/vinycxuz)
 
-- 📝 I regularly write articles on [daily.dev](daily.dev)
+- 📝 I regularly read articles on [daily.dev](daily.dev)
 
 - 💬 Ask me about **NodeJS, React**
 
