@@ -9,8 +9,6 @@
 
 - 📝 I regularly read articles on [daily.dev](daily.dev)
 
-- 💬 Ask me about **NodeJS, React**
-
 - 📫 How to reach me **vinyby@gmail.com**
 
 - 📄 Know about my experiences [https://linkedin.com/in/vinycxuz](https://linkedin.com/in/vinycxuz)
