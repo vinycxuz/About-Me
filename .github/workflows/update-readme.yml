@@ -54,5 +54,5 @@ jobs:
 
       - name: Stop Server
         run: |
-          Stop-Process -Name "node"
+          Stop-Process -NoNewWindow -FilePath "node" -ArgumentList "index.js"
         shell: pwsh
