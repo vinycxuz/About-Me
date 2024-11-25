@@ -38,3 +38,5 @@
 
 <!--START_SECTION:latest-updates-->
 <!--END_SECTION:latest-updates-->
+
+[![README](https://github.com/vinycxuz/About-me/actions/workflows/update-readme.yml/badge.svg)](https://github.com/vinycxuz/About-me/actions/workflows/update-readme.yml)
