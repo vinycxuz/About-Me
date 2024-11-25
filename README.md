@@ -14,8 +14,6 @@
 
 - 📄 Know about my experiences [https://linkedin.com/in/vinycxuz](https://linkedin.com/in/vinycxuz)
 
-<a href="https://app.daily.dev/vinycxuz"><img src="https://api.daily.dev/devcards/b832c289097248d6947ec3dedbba3e11.png?r=7w9" width="400" alt="Vinícius Aarão Caldas da Costa's Dev Card"/></a>
-
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=vinycxuz&show_icons=true&locale=en&layout=compact" alt="vinycxuz" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=vinycxuz&" alt="vinycxuz" /></p>
@@ -33,3 +31,5 @@ https://dev.to/vinycxuz/algorithm-to-determine-if-brackets-are-balanced-2lll
 <!--END_SECTION:latest-articles-->
 
 [![README](https://github.com/vinycxuz/About-me/actions/workflows/update-readme.yml/badge.svg)](https://github.com/vinycxuz/About-me/actions/workflows/update-readme.yml)
+
+<a href="https://app.daily.dev/vinycxuz"><img src="https://api.daily.dev/devcards/b832c289097248d6947ec3dedbba3e11.png?r=7w9" width="400" alt="Vinícius Aarão Caldas da Costa's Dev Card"/></a>
