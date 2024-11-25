@@ -3,8 +3,6 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=vinycxuz&label=Profile%20views&color=0e75b6&style=flat" alt="vinycxuz" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=vinycxuz" alt="vinycxuz" /></a> </p>
-
 - 👨‍💻 All of my projects are available at [https://github.com/vinycxuz](https://github.com/vinycxuz)
 
 - 📝 I regularly read and write articles on [daily.dev](daily.dev)
