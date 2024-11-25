@@ -1,5 +1,3 @@
-
-
 <h1 align="center">Hi 👋, I'm Vinícius Aarão</h1>
 <h3 align="center">A fullstack developer from Brazil</h3>
 
@@ -35,8 +33,5 @@
 
 <!--START_SECTION:waka-->
 <!--END_SECTION:waka-->
-
-<!--START_SECTION:latest-updates-->
-<!--END_SECTION:latest-updates-->
 
 [![README](https://github.com/vinycxuz/About-me/actions/workflows/update-readme.yml/badge.svg)](https://github.com/vinycxuz/About-me/actions/workflows/update-readme.yml)
