@@ -37,6 +37,11 @@ jobs:
           Start-Sleep -Seconds 15
         shell: pwsh
 
+      - name: Call Update README Endpoint
+        run: |
+          Invoke-RestMethod -Uri http://localhost:3000/articles -Method Get
+        shell: pwsh
+
       - name: Atualizar README
         run: |
           $latestUpdates = "`n## Últimas Atualizações`nAtualizado em: $(Get-Date)"
