@@ -30,6 +30,25 @@ jobs:
           (Get-Content -Path README.md) -replace '<!--START_SECTION:latest-updates-->.*<!--END_SECTION:latest-updates-->', "<!--START_SECTION:latest-updates-->$latestUpdates`n<!--END_SECTION:latest-updates-->" | Set-Content -Path README.md
         shell: pwsh
 
+      - name: Start Server
+        run: |
+          Start-Process -NoNewWindow -FilePath "node" -ArgumentList "index.js"
+        shell: pwsh
+
+      - name: Fetch Latest Articles
+        run: |
+          Start-Sleep -Seconds 10 # Wait for the server to start
+          $articles = Invoke-RestMethod -Uri http://localhost:3000/articles
+          $readmeContent = Get-Content -Path README.md
+          $updatedReadme = $readmeContent -replace '<!--START_SECTION:latest-articles-->.*<!--END_SECTION:latest-articles-->', "<!--START_SECTION:latest-articles-->`n$articles`n<!--END_SECTION:latest-articles-->"
+          Set-Content -Path README.md -Value $updatedReadme
+        shell: pwsh
+
+      - name: Stop Server
+        run: |
+          Stop-Process -Name "node"
+        shell: pwsh
+
       - name: Commit e Push
         run: |
           git add README.md
