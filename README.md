@@ -8,12 +8,11 @@
 - 📝 I regularly read and write articles on [daily.dev](daily.dev)
 
 - 📫 How to reach me **vinyby@gmail.com**
-
-- 📄 Know about my experiences [https://linkedin.com/in/vinycxuz](https://linkedin.com/in/vinycxuz)
-
 <p align="left">
 <a href="https://linkedin.com/in/https://linkedin.com/in/vinycxuz" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://linkedin.com/in/vinycxuz" height="30" width="40" /></a>
 </p>
+
+- 📄 Know about my experiences [https://linkedin.com/in/vinycxuz](https://linkedin.com/in/vinycxuz)
 
 <a href="https://app.daily.dev/vinycxuz"><img src="https://api.daily.dev/devcards/b832c289097248d6947ec3dedbba3e11.png?r=7w9" width="400" alt="Vinícius Aarão Caldas da Costa's Dev Card"/></a>
 
