@@ -1,10 +1,16 @@
-const express = require('express');
-const app = express();
-const dotenv = require('dotenv');
-const fs = require('fs');
-const path = require('path');
+import express from 'express';
+import dotenv from 'dotenv';
+import fs from 'fs';
+import path from 'path';
+import fetch from 'node-fetch';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const app = express();
 
 app.get('/', (req, res) => {
     res.send('Olá, mundo!');
@@ -22,18 +28,21 @@ app.get('/articles', async (req, res) => {
         articles.forEach(article => {
             markdown += `## ${article.title}\n`;
             markdown += `${article.url}\n`;
-        });
-
+        
         const readmePath = path.join(__dirname, 'README.md');
         const readmeContent = fs.readFileSync(readmePath, 'utf8');
         const updatedReadme = readmeContent.replace(
-            '<!--START_SECTION:latest-articles-->.*<!--END_SECTION:latest-articles-->',
+            /<!--START_SECTION:latest-articles-->[\s\S]*<!--END_SECTION:latest-articles-->/,
             `<!--START_SECTION:latest-articles-->\n${markdown}\n<!--END_SECTION:latest-articles-->`
         );
-        fs.writeFileSync(readmePath, updatedReadme);
-
+        
+        fs.writeFileSync(readmePath, updatedReadme); 
+        
+        console.log('README.md atualizado com sucesso.');
         res.send(markdown); 
+        });
     } catch (error) {
+        console.error('Erro ao buscar artigos ou atualizar README.md:', error);
         res.status(500).json({ error: 'Erro ao buscar artigos' });
     }
 });
