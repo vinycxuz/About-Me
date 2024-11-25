@@ -1,0 +1,51 @@
+name: Waka Readme
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Executa diariamente
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    name: Update Readme with Metrics
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+          
+      - name: Instalar Dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install wakatime
+        shell: pwsh
+        
+      - name: Atualizar README com WakaTime
+        uses: anmol098/waka-readme-stats@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          GH_TOKEN: ${{ secrets.PAT }}
+          SHOW_LINES_OF_CODE: "True"
+          SHOW_PROFILE_VIEWS: "False"
+          SHOW_COMMIT: "True"
+          SHOW_DAYS_OF_WEEK: "True"
+          SHOW_LANGUAGE: "True"
+          SHOW_OS: "True"
+          SHOW_PROJECTS: "True"
+          SHOW_TIMEZONE: "True"
+          SHOW_EDITORS: "True"
+          SHOW_SHORT_INFO: "True"
+          LOCALE: "pt-BR"
+        
+      - name: Commit e Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --quiet && git diff --staged --quiet || git commit -m "docs: atualiza estatísticas do wakatime"
+          git push
+        shell: pwsh

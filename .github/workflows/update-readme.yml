@@ -1,0 +1,39 @@
+name: README
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Executa a cada hora
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Configurar Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        shell: pwsh
+
+      - name: Atualizar README
+        run: |
+          Set-Content -Path README.md -Value "# Meu Projeto"
+          Add-Content -Path README.md -Value "`n## Últimas Atualizações"
+          Add-Content -Path README.md -Value "`nAtualizado em: $(Get-Date)"
+          Add-Content -Path README.md -Value "`n## Branches Disponíveis"
+          git branch -r | Where-Object {$_ -notmatch 'HEAD|main'} | ForEach-Object { Add-Content -Path README.md -Value "- $($_.Split('/')[1])" }
+        shell: pwsh
+
+      - name: Commit e Push
+        run: |
+          git add README.md
+          git diff-index --quiet HEAD || git commit -m "docs: atualiza readme $(Get-Date)"
+          git push origin main
+        shell: pwsh
