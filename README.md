@@ -34,4 +34,13 @@
 <!--START_SECTION:waka-->
 <!--END_SECTION:waka-->
 
+<!--START_SECTION:latest-articles-->
+# Latest Articles
+
+## Algorithm to determine if brackets are balanced
+https://dev.to/vinycxuz/algorithm-to-determine-if-brackets-are-balanced-2lll
+
+
+<!--END_SECTION:latest-articles-->
+
 [![README](https://github.com/vinycxuz/About-me/actions/workflows/update-readme.yml/badge.svg)](https://github.com/vinycxuz/About-me/actions/workflows/update-readme.yml)

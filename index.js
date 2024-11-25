@@ -12,7 +12,11 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
+    res.send('Olá, mundo!');
+});
+
+app.get('/articles', async (req, res) => {
     try {
         const response = await fetch('https://dev.to/api/articles?username=vinycxuz', {
             headers: {
