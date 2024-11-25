@@ -27,6 +27,16 @@ jobs:
           npm install
         shell: pwsh
 
+      - name: Start Server
+        run: |
+          Start-Process -NoNewWindow -FilePath "node" -ArgumentList "index.js"
+        shell: pwsh
+
+      - name: Wait for 15 seconds
+        run: |
+          Start-Sleep -Seconds 15
+        shell: pwsh
+
       - name: Atualizar README
         run: |
           $latestUpdates = "`n## Últimas Atualizações`nAtualizado em: $(Get-Date)"
@@ -35,47 +45,14 @@ jobs:
           (Get-Content -Path README.md) -replace '<!--START_SECTION:latest-updates-->.*<!--END_SECTION:latest-updates-->', "<!--START_SECTION:latest-updates-->$latestUpdates`n<!--END_SECTION:latest-updates-->" | Set-Content -Path README.md
         shell: pwsh
 
-      - name: Start Server
-        run: |
-          Start-Process -NoNewWindow -FilePath "node" -ArgumentList "index.js"
-        shell: pwsh
-
-      - name: Wait for Server to Start
-        run: |
-          $maxRetries = 5
-          $retryCount = 0
-          while ($retryCount -lt $maxRetries) {
-            try {
-              Invoke-RestMethod -Uri http://localhost:3000 -TimeoutSec 5
-              Write-Output "Server is up and running."
-              break
-            } catch {
-              Write-Output "Waiting for server to start..."
-              Start-Sleep -Seconds 5
-              $retryCount++
-            }
-          }
-          if ($retryCount -eq $maxRetries) {
-            throw "Server did not start in time."
-          }
-        shell: pwsh
-
-      - name: Fetch Latest Articles
-        run: |
-          $articles = Invoke-RestMethod -Uri http://localhost:3000/articles
-          $readmeContent = Get-Content -Path README.md
-          $updatedReadme = $readmeContent -replace '<!--START_SECTION:latest-articles-->.*<!--END_SECTION:latest-articles-->', "<!--START_SECTION:latest-articles-->`n$articles`n<!--END_SECTION:latest-articles-->"
-          Set-Content -Path README.md -Value $updatedReadme
-        shell: pwsh
-
-      - name: Stop Server
-        run: |
-          Stop-Process -Name "node"
-        shell: pwsh
-
       - name: Commit e Push
         run: |
           git add README.md
           git commit -m "docs: atualiza readme $(Get-Date)"
           git push origin main
+        shell: pwsh
+
+      - name: Stop Server
+        run: |
+          Stop-Process -Name "node"
         shell: pwsh
