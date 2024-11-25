@@ -2,15 +2,15 @@
 <h3 align="center">A fullstack developer from Brazil</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=vinycxuz&label=Profile%20views&color=0e75b6&style=flat" alt="vinycxuz" /> </p>
+<p align="left">
+<a href="https://linkedin.com/in/https://linkedin.com/in/vinycxuz" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://linkedin.com/in/vinycxuz" height="30" width="40" /></a>
+</p>
 
 - 👨‍💻 All of my projects are available at [https://github.com/vinycxuz](https://github.com/vinycxuz)
 
 - 📝 I regularly read and write articles on [daily.dev](daily.dev)
 
 - 📫 How to reach me **vinyby@gmail.com**
-<p align="left">
-<a href="https://linkedin.com/in/https://linkedin.com/in/vinycxuz" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://linkedin.com/in/vinycxuz" height="30" width="40" /></a>
-</p>
 
 - 📄 Know about my experiences [https://linkedin.com/in/vinycxuz](https://linkedin.com/in/vinycxuz)
 
