@@ -22,6 +22,11 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
         shell: pwsh
 
+      - name: Instalar dependências do Node.js
+        run: |
+          npm install
+        shell: pwsh
+
       - name: Atualizar README
         run: |
           $latestUpdates = "`n## Últimas Atualizações`nAtualizado em: $(Get-Date)"
