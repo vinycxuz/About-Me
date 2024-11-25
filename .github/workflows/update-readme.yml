@@ -24,10 +24,10 @@ jobs:
 
       - name: Atualizar README
         run: |
-          Set-Content -Path README.md -Value "# Test"
-          Add-Content -Path README.md -Value "`n## Últimas Atualizações"
-          Add-Content -Path README.md -Value "`nAtualizado em: $(Get-Date)"
-          git branch -r | Where-Object {$_ -notmatch 'HEAD|main'} | ForEach-Object { Add-Content -Path README.md -Value "- $($_.Split('/')[1])" }
+          $latestUpdates = "`n## Últimas Atualizações`nAtualizado em: $(Get-Date)"
+          $branches = git branch -r | Where-Object {$_ -notmatch 'HEAD|main'} | ForEach-Object { "- $($_.Split('/')[1])" }
+          $latestUpdates += "`n" + ($branches -join "`n")
+          (Get-Content -Path README.md) -replace '<!--START_SECTION:latest-updates-->.*<!--END_SECTION:latest-updates-->', "<!--START_SECTION:latest-updates-->$latestUpdates`n<!--END_SECTION:latest-updates-->" | Set-Content -Path README.md
         shell: pwsh
 
       - name: Commit e Push

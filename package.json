@@ -1,0 +1,12 @@
+{
+  "name": "about-me",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Hi 👋, I'm Vinícius Aarão</h1>\r <h3 align=\"center\">A fullstack developer from Brazil</h3>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
