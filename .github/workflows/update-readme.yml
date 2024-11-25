@@ -33,6 +33,6 @@ jobs:
       - name: Commit e Push
         run: |
           git add README.md
-          git diff-index --quiet HEAD || git commit -m "docs: atualiza readme $(Get-Date)"
+          git commit -m "docs: atualiza readme $(Get-Date)"
           git push origin main
         shell: pwsh
