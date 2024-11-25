@@ -19,7 +19,7 @@ app.get('/articles', async (req, res) => {
         let markdown = '# Latest Articles\n\n';
         articles.forEach(article => {
             markdown += `## ${article.title}\n`;
-            markdown += `${article.url}\n\n`;
+            markdown += `${article.url}\n`;
         });
         res.send(markdown); // Send the markdown content as response
     } catch (error) {
