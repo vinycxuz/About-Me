@@ -33,6 +33,3 @@
 
 <!--START_SECTION:waka-->
 <!--END_SECTION:waka-->
-
-<!--START_SECTION:latest-updates-->
-<!--END_SECTION:latest-updates-->
