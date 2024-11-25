@@ -51,8 +51,3 @@ jobs:
           git commit -m "docs: atualiza readme $(Get-Date)"
           git push origin main
         shell: pwsh
-
-      - name: Stop Server
-        run: |
-          Stop-Process -NoNewWindow -FilePath "node" -ArgumentList "index.js"
-        shell: pwsh
