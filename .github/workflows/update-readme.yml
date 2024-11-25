@@ -24,10 +24,9 @@ jobs:
 
       - name: Atualizar README
         run: |
-          Set-Content -Path README.md -Value "# Meu Projeto"
+          Set-Content -Path README.md -Value "# Test"
           Add-Content -Path README.md -Value "`n## Últimas Atualizações"
           Add-Content -Path README.md -Value "`nAtualizado em: $(Get-Date)"
-          Add-Content -Path README.md -Value "`n## Branches Disponíveis"
           git branch -r | Where-Object {$_ -notmatch 'HEAD|main'} | ForEach-Object { Add-Content -Path README.md -Value "- $($_.Split('/')[1])" }
         shell: pwsh
 
