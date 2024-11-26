@@ -32,14 +32,9 @@ jobs:
           Start-Process -NoNewWindow -FilePath "node" -ArgumentList "index.js"
         shell: pwsh
 
-      - name: Wait for 15 seconds
+      - name: Wait for 5 seconds
         run: |
-          Start-Sleep -Seconds 15
-        shell: pwsh
-
-      - name: Call Update README Endpoint
-        run: |
-          Invoke-RestMethod -Uri http://localhost:3000/articles -Method Get
+          Start-Sleep -Seconds 5
         shell: pwsh
 
       - name: Atualizar README
