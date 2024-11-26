@@ -16,7 +16,7 @@
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=vinycxuz&show_icons=true&locale=en&layout=compact" alt="vinycxuz" /></p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=vinycxuz&" alt="vinycxuz" /></p>
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=vinycxuz&count_private=true&hide=contribs,stars" alt="vinycxuz" /></p>
 
 <!--START_SECTION:waka-->
 <!--END_SECTION:waka-->
