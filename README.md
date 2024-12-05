@@ -18,20 +18,9 @@
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=vinycxuz&count_private=true&hide=contribs,stars" alt="vinycxuz" /></p>
 
-<!--START_SECTION:waka-->
-<!--END_SECTION:waka-->
-
 <!--START_SECTION:latest-articles-->
 # Latest Articles
 
 ## Algorithm to determine if brackets are balanced
 https://dev.to/vinycxuz/algorithm-to-determine-if-brackets-are-balanced-2lll
 
-
-<!--END_SECTION:latest-articles-->
-
-[![README](https://github.com/vinycxuz/About-me/actions/workflows/update-readme.yml/badge.svg)](https://github.com/vinycxuz/About-me/actions/workflows/update-readme.yml)
-
-<a href="https://app.daily.dev/vinycxuz"><img src="https://api.daily.dev/devcards/b832c289097248d6947ec3dedbba3e11.png?r=7w9" width="400" alt="Vinícius Aarão Caldas da Costa's Dev Card"/></a>
-
-[![WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=vinycxuz)](https://github.com/anuraghazra/github-readme-stats)
