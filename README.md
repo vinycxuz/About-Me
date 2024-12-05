@@ -33,3 +33,5 @@ https://dev.to/vinycxuz/algorithm-to-determine-if-brackets-are-balanced-2lll
 [![README](https://github.com/vinycxuz/About-me/actions/workflows/update-readme.yml/badge.svg)](https://github.com/vinycxuz/About-me/actions/workflows/update-readme.yml)
 
 <a href="https://app.daily.dev/vinycxuz"><img src="https://api.daily.dev/devcards/b832c289097248d6947ec3dedbba3e11.png?r=7w9" width="400" alt="Vinícius Aarão Caldas da Costa's Dev Card"/></a>
+
+[![WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=vinycxuz)](https://github.com/anuraghazra/github-readme-stats)
